@@ -1,7 +1,7 @@
 'use client';
 
 import { ThemeProvider } from 'styled-components';
-import { theme } from '@/styles/theme';
+import { theme, themeDark } from '@/styles/theme';
 import { GlobalStyle } from '@/styles/GlobalStyle';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

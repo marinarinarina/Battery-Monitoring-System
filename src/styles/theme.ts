@@ -12,10 +12,8 @@ export const theme = {
 
     // 배경 및 텍스트
     background: '#F9FAFB',
-    backgroundDark: '#1C1C1E',
-    cardDark: '#2A2A2E',
+    backgroundDark: '#1F2937', // 다크 모드 배경
     border: '#E0E0E0',
-
     textPrimary: '#111111',
     textSecondary: '#666666',
     disabled: '#CCCCCC',
@@ -40,6 +38,28 @@ export const theme = {
       tight: '-0.4px',
     },
   },
+  // 반응형 대응
+  breakpoints: {
+    mobile: 0,
+    tablet: 769,
+    desktop: 1024,
+  },
+
+  layout: {
+    headerHeight: {
+      desktop: 64,
+      mobile: 48,
+    },
+    footerHeight: {
+      desktop: 56,
+      mobile: 48,
+    },
+    sidePadding: {
+      desktop: 32,
+      mobile: 16,
+    },
+    maxWidth: 1200, // 데스크탑 컨테이너 최대폭
+  },
 
   spacing: {
     unit: 8,
@@ -59,9 +79,37 @@ export const theme = {
   radius: {
     button: 8,
     input: 6,
+    card: 12,
   },
 
   shadow: {
     card: '0px 2px 8px rgba(0,0,0,0.05)',
+    tooltip: '0px 4px 12px rgba(0, 0, 0, 0.1)',
   },
+
+  zIndex: {
+    base: 0,
+    dropdown: 10,
+    tooltip: 20,
+    modal: 30,
+    toast: 40,
+  },
+
+  transition: {
+    fast: '150ms ease-in-out',
+    medium: '300ms ease',
+    slow: '500ms ease-out',
+  },
+};
+
+export const themeDark = {
+  ...theme,
+  colors: { 
+    ...theme.colors,
+    background: '#1F2937',
+    textPrimary: '#F9FAFB',
+    textSecondary: '#D1D5DB',
+    border: '#374151',
+    disabled: '#4B5563',  
+   },
 };

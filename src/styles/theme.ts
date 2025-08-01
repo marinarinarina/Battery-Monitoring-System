@@ -8,7 +8,7 @@ export const theme = {
 
     // 경고/위험
     warning: '#FFAD00',
-    danger: '#FF4444',
+    critical: '#FF4444',
 
     // 배경 및 텍스트
     background: '#F9FAFB',
@@ -17,15 +17,23 @@ export const theme = {
     textPrimary: '#111111',
     textSecondary: '#666666',
     disabled: '#CCCCCC',
+
+    switchThumb: '#FFFFFF', // 스위치 썸네일 색상
+  },
+
+  sizes: {
+    switchWidth: '48px',
+    switchHeight: '28px',
   },
 
   font: {
     family: `'Noto Sans KR', sans-serif`,
     size: {
-      h1: '24px',
-      h2: '20px',
+      h1: '24px', // 페이지, 섹션 제목
+      h2: '20px', // 하위 제목, 카드 타이틀
       body: '16px',
-      caption: '12px',
+      label: '14px', // 폼 레이블, 버튼 텍스트
+      caption: '12px',  // 이미지 캡션, 부가 설명, 보조 텍스트
     },
     lineHeight: {
       h1: '32px',
@@ -37,7 +45,14 @@ export const theme = {
       default: '0.2px',
       tight: '-0.4px',
     },
+    weight: {
+      light: 300,
+      regular: 400,
+      medium: 500,
+      bold: 700,
+    },
   },
+  
   // 반응형 대응
   breakpoints: {
     mobile: 0,
@@ -64,6 +79,10 @@ export const theme = {
   spacing: {
     unit: 8,
     sectionPadding: 24,
+    selectPaddingRight: {
+      desktop: 40,
+      mobile: 30,
+    },
     cardPadding: {
       desktop: 16,
       mobile: 12,
@@ -72,7 +91,15 @@ export const theme = {
       default: 40,
       small: 32,
     },
-    inputPadding: '12px 16px',
+    inputVertical: {
+      desktop: 12,
+      mobile: 10,
+    },
+    inputHorizontal: {
+      desktop: 16,
+      mobile: 14,
+    },
+
     sectionGap: 32,
   },
 

@@ -46,7 +46,7 @@ export const Interactive: Story = {
   parameters: {
     docs: {
       description: {
-        story: '클릭 시 실제로 mode가 light/dark로 전환됩니다.',
+        story: '클릭 시 light/dark 모드 전환',
       },
     },
   },

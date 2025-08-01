@@ -3,14 +3,13 @@ import styled from 'styled-components';
 export const SwitchWrapper = styled.button<{ checked: boolean }>`
   display: inline-flex;
   align-items: center;
-  width: 48px;
-  height: 28px;
+  width: ${({ theme }) => theme.sizes?.switchWidth};
+  height: ${({ theme }) => theme.sizes?.switchHeight};
   border: none;
   background: none;
   cursor: pointer;
   padding: 0;
   position: relative;
-  /* 스크린리더 접근성 */
   outline: none;
 
   &:focus-visible {
@@ -40,7 +39,7 @@ export const SwitchThumb = styled.span<{ checked: boolean }>`
   height: 20px;
   border-radius: 50%;
   transition: left 0.2s, background 0.2s;
-  background: #FFF;
+  background: ${({ theme }) => theme.colors.switchThumb};
   box-shadow: 0 1px 4px rgba(0,0,0,0.13);
   z-index: 1;
 `;

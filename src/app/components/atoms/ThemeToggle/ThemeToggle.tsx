@@ -11,7 +11,14 @@ export const ThemeToggle = ({ mode, onToggle }: ThemeToggleProps) => {
       aria-label="Toggle dark mode"
       role="switch"
       type="button"
+      tabIndex={0}
       onClick={onToggle}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onToggle();
+        }
+      }}
     >
       <SwitchTrack checked={checked} />
       <SwitchThumb checked={checked} />

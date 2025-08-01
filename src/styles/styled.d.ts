@@ -3,6 +3,7 @@ import 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: typeof import('./theme').theme.colors;
+    sizes: typeof import('./theme').theme.sizes;
     font: typeof import('./theme').theme.font;
     breakpoints: typeof import('./theme').theme.breakpoints;
     layout: typeof import('./theme').theme.layout;

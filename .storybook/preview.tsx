@@ -13,7 +13,11 @@ export const globalTypes = {
       icon: 'circlehollow',
       items: ['light', 'dark'],
       showName: true,
+      dynamicTitle: true,
     },
+  },
+  initialGlobals: {
+    theme: 'light',
   },
 };
 

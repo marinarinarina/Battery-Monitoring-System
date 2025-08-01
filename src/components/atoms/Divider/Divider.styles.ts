@@ -19,7 +19,7 @@ export const StyledDivider = styled.div<DividerProps>`
   ${({ orientation = 'horizontal' }) =>
     orientation === 'horizontal' ? horizontalStyle : verticalStyle};
   /* 모바일에서 세로 구분선일 경우 자동 숨김 */
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile - 1}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet - 1}px) {
     ${({ orientation }) =>
       orientation === 'vertical' &&
       css`

@@ -12,7 +12,7 @@ const Sidebar = styled.nav`
   background-color: ${({ theme }) => theme.colors.backgroundDark};
   color: ${({ theme }) => theme.colors.textPrimary};
   padding: 16px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile - 1}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet - 1}px) {
     display: none; /* 모바일에서 사이드바 숨김 */
   }
 `;

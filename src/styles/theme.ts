@@ -1,3 +1,5 @@
+import { background } from "storybook/internal/theming";
+
 // 디자인 토큰 기반 테마 객체 정의
 export const theme = {
   colors: {
@@ -13,12 +15,14 @@ export const theme = {
     // 배경 및 텍스트
     background: '#F9FAFB',
     backgroundDark: '#1F2937', // 다크 모드 배경
-    border: '#E0E0E0',
+    border: '#a3a3a3ff',
     textPrimary: '#111111',
-    textSecondary: '#666666',
+    textSecondary: '#666666', // BFCBCE, 6F90AF
     disabled: '#CCCCCC',
 
     switchThumb: '#FFFFFF', // 스위치 썸네일 색상
+    backgroundCard: '#ffffffff', // 카드 배경색
+    backgroundVideoBox: '#000000', // 비디오 박스 배경색
   },
 
   sizes: {
@@ -138,5 +142,6 @@ export const themeDark = {
     textSecondary: '#D1D5DB',
     border: '#374151',
     disabled: '#4B5563',  
+    backgroundCard: '#293445ff',
    },
 };

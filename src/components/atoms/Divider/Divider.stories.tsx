@@ -34,7 +34,7 @@ export const Horizontal: Story = {
 
 export const Vertical: Story = {
   args: {
-    orientation: 'vertical',
-    margin: '0 16px',
+    orientation: "horizontal",
+    margin: "4 16px",
   },
 };

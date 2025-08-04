@@ -1,23 +1,44 @@
 import styled from 'styled-components';
 import type { SensorStatus } from './SensorCard.types';
 
-export const Card = styled.section`
-  background-color: ${({ theme }) => theme.colors.background};
-  border-radius: ${({ theme }) => theme.radius.card};
-  box-shadow: ${({ theme }) => theme.shadow.card};
-  padding: ${({ theme }) => theme.spacing.cardPadding.desktop}px;
+export const Wrapper = styled.section`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.unit}px;
+  align-items: flex-start;
 `;
 
-export const SensorId = styled.h2`
+export const Location = styled.h3`
   font-size: ${({ theme }) => theme.font.size.body};
   color: ${({ theme }) => theme.colors.textPrimary};
+  font-weight: ${({ theme }) => theme.font.weight.medium};
+  margin-bottom: 8px;
 `;
 
-export const SensorValue = styled.span<{ status: SensorStatus }>`
-  font-size: ${({ theme }) => theme.font.size.h1};
+export const Grid = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+`;
+
+export const ValueBox = styled.div<{ status: SensorStatus }>`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 8px;
+`;
+
+export const Label = styled.span`
+  font-size: ${({ theme }) => theme.font.size.caption};
+  color: ${({ theme }) => theme.colors.textSecondary};
+  margin-bottom: 2px;
+`;
+
+export const Value = styled.span<{ status: SensorStatus }>`
+  font-size: ${({ theme }) => theme.font.size.h2};
   font-weight: ${({ theme }) => theme.font.weight.bold};
   color: ${({ theme, status }) =>
     status === 'normal'
@@ -26,3 +47,4 @@ export const SensorValue = styled.span<{ status: SensorStatus }>`
       ? theme.colors.warning
       : theme.colors.critical};
 `;
+

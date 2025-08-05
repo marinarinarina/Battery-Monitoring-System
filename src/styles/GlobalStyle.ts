@@ -8,8 +8,9 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body {
-    width: 100%;
+  html, body, #__next {
+    width: 100vw;
+    min-width: 0;
     font-family: ${({ theme }) => theme.font.family};
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.textPrimary};

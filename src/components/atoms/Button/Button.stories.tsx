@@ -8,7 +8,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: 'radio',
-      options: ['primary', 'secondary', 'critical', 'disabled'],
+      options: ['primary', 'secondary', 'critical', 'disabled', 'custom'],
       description: '버튼 스타일 종류',
     },
     size: {
@@ -20,6 +20,9 @@ const meta: Meta<typeof Button> = {
       control: 'boolean',
       description: '가로폭 100% 여부',
     },
+    color: { control: 'color', description: 'custom 배경색' },
+    hoverColor: { control: 'color', description: 'custom hover 배경색' },
+    textColor: { control: 'color', description: 'custom 텍스트 색상' },
     onClick: {
       action: 'clicked',
       description: '클릭 이벤트',
@@ -86,5 +89,16 @@ export const Large: Story = {
     variant: 'primary',
     size: 'large',
     children: 'Large Button',
+  },
+};
+
+export const Custom: Story = {
+  args: {
+    variant: 'custom',
+    size: 'medium',
+    color: '#312E81',        
+    hoverColor: '#4338CA',   
+    textColor: '#FFF',       
+    children: 'Custom Button',
   },
 };

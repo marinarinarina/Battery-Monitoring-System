@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
   min-width: 0;
-  background: ${({ theme }) => theme.colors.backgroundCard};
+  background: ${({ theme }) => theme.colors.card};
   border-radius: ${({ theme }) => theme.radius.card}px;
   box-shadow: ${({ theme }) => theme.shadow.card};
   overflow: hidden;

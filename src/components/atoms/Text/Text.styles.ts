@@ -29,7 +29,10 @@ const variantStyles = {
   `,
 };
 
-export const StyledText = styled.span<{ variant?: TextVariant }>`
-  color: ${({ theme }) => theme.colors.textPrimary};
+export const StyledText = styled.span<{ 
+  variant?: TextVariant;
+  color?: string;
+ }>`
+  color: ${({ theme, color }) => color ?? theme.colors.textPrimary};
   ${({ variant = 'body' }) => variantStyles[variant]};
 `;

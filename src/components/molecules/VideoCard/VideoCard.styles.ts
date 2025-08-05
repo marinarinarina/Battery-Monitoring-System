@@ -15,7 +15,7 @@ export const VideoBox = styled.div`
   justify-content: center;
   overflow: hidden;
   position: relative;
-  background-color: ${({ theme }) => theme.colors.backgroundVideoBox};
+  background-color: ${({ theme }) => theme.colors.videoBox};
 `;
 
 export const ErrorBox = styled.div`

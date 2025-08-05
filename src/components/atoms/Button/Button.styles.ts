@@ -35,6 +35,16 @@ const variantStyles = {
     cursor: not-allowed;
     border: none;
   `,
+  custom: css<{ color?: string; textColor?: string; hoverColor?: string }>`
+    background-color: ${({ color }) => color ?? 'gray'};
+    color: ${({ textColor }) => textColor ?? 'white'};
+    border: none;
+    
+    &:hover:not(:disabled) {
+      background-color: ${({ hoverColor, color }) => hoverColor ?? color ?? 'gray'};
+      color: ${({ textColor }) => textColor ?? 'gray'};
+    }
+  `,
 };
 
 const sizeStyles = {

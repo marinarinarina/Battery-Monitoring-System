@@ -19,6 +19,10 @@ const meta: Meta<typeof Text> = {
       control: 'text',
       description: '표시할 텍스트',
     },
+    color: {
+      control: 'color',
+      description: '텍스트 색상',
+    }
   },
 };
 export default meta;

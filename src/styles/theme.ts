@@ -1,6 +1,3 @@
-import { background } from "storybook/internal/theming";
-
-// 디자인 토큰 기반 테마 객체 정의
 export const theme = {
   colors: {
     // 핵심 색상
@@ -13,16 +10,19 @@ export const theme = {
     critical: '#FF4444',
 
     // 배경 및 텍스트
-    background: '#F9FAFB',
+    background: '#ebebebff',
     backgroundDark: '#1F2937', // 다크 모드 배경
-    border: '#a3a3a3ff',
+    border: '#b9b9b9ff',
     textPrimary: '#111111',
-    textSecondary: '#666666', // BFCBCE, 6F90AF
-    disabled: '#CCCCCC',
+    textSecondary: '#636363ff', // BFCBCE, 6F90AF
+    disabled: '#bcbcbcff',
 
     switchThumb: '#FFFFFF', // 스위치 썸네일 색상
-    backgroundCard: '#ffffffff', // 카드 배경색
-    backgroundVideoBox: '#000000', // 비디오 박스 배경색
+    header: '#0075FF',
+    card: '#FFFFFF',
+    sidebar: '#FFFFFF',
+    videoBox: '#000000', // 비디오 박스 배경색
+    sidebarHover: '#ddefffff',
   },
 
   sizes: {
@@ -124,6 +124,8 @@ export const theme = {
     tooltip: 20,
     modal: 30,
     toast: 40,
+    header: 50,
+    sidebar: 60,
   },
 
   transition: {
@@ -142,6 +144,10 @@ export const themeDark = {
     textSecondary: '#D1D5DB',
     border: '#374151',
     disabled: '#4B5563',  
-    backgroundCard: '#293445ff',
+    
+    header: '#30343aff',
+    card: '#293445ff',
+    sidebar: '#25344dff',
+    sidebarHover: '#3a4964ff',
    },
 };

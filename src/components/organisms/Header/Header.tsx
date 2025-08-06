@@ -1,11 +1,10 @@
-import { Icon } from '@/components/atoms/Icon/Icon';
 import { Text } from '@/components/atoms/Text/Text';
 import { FiMenu } from 'react-icons/fi';
 import { HeaderProps } from './Header.types';
 import { HeaderAvatar, HeaderWrapper, Left, Right, HamburgerButton } from './Header.styles';
 
 
-export default function Header({ onMenuClick, username = "사용자", avatarUrl }: HeaderProps) {
+export default function Header({ onMenuClick, username = "Marina Kim", avatarUrl = "https://randomuser.me/api/portraits/women/31.jpg" }: HeaderProps) {
   return (
     <HeaderWrapper>
       <Left>

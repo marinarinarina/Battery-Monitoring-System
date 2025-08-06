@@ -8,6 +8,9 @@ export const VideoHeader = styled.div`
 
 export const VideoBox = styled.div`
   width: 100%;
+  max-width: 100%;  
+  height: auto
+  min-height: 160px; 
   margin-top: ${({ theme }) => theme.spacing.unit}px;
   margin-bottom: ${({ theme }) => theme.spacing.unit}px;
   display: flex;
@@ -20,6 +23,9 @@ export const VideoBox = styled.div`
 
 export const ErrorBox = styled.div`
   width: 100%;
+  max-width: 100%;  
+  height: auto
+  min-height: 160px; 
   color: ${({ theme }) => theme.colors.critical};
   font-weight: ${({ theme }) => theme.font.weight.bold};
   display: flex;

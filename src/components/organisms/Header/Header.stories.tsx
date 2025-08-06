@@ -1,9 +1,20 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, StoryFn, StoryContext } from '@storybook/react';
 import Header from './Header';
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
+
+const withTheme = (Story: StoryFn, context: StoryContext) => {
+  const themeMode = context.globals.themeMode ?? 'light';
+  return (
+    <ThemeProvider initialMode={themeMode}>
+      {Story(context,context)}
+    </ThemeProvider>
+  );
+};
 
 const meta: Meta<typeof Header> = {
   title: 'Organisms/Header',
   component: Header,
+  decorators: [withTheme],
   tags: ['autodocs'],
   argTypes: {
     onMenuClick: { action: '메뉴버튼 클릭' },

@@ -1,12 +1,7 @@
+import dynamic from 'next/dynamic';
 
-import MainLayout from '@/components/templates/MainLayout/MainLayout';
-import MonitoringGrid from '@/components/organisms/MonitoringGrid/MonitoringGrid';
+const MonitorPage = dynamic(() => import('@/components/pages/Monitor/MonitorPage'), { ssr: false });
 
-export default function MonitorPage() {
-  return (
-    <MainLayout>
-      <h1>Monitor</h1>
-      {/*<MonitoringGrid />*/}
-    </MainLayout>
-  );
+export default function MonitorRoutePage() {
+  return <MonitorPage />;
 }

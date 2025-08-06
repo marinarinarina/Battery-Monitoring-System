@@ -6,6 +6,8 @@ export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: auto
+  min-height: 140px; 
 `;
 
 export const Location = styled.h3`

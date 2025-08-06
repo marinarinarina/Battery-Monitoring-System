@@ -7,11 +7,14 @@ import React from 'react';
 export const globalTypes = {
   theme: {
     name: 'Theme',
-    description: 'Global theme mode',
+    description: '다크/라이트 모드 전환',
     defaultValue: 'light',
     toolbar: {
       icon: 'circlehollow',
-      items: ['light', 'dark'],
+      items: [
+        { value: 'light', title: '라이트' },
+        { value: 'dark', title: '다크' },
+      ],
       showName: true,
       dynamicTitle: true,
     },

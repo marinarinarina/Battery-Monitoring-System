@@ -1,3 +1,5 @@
+import { useThemeMode } from '@/components/providers/ThemeProvider';
+import { ThemeToggle } from '@/components/atoms/ThemeToggle/ThemeToggle';
 import { Text } from '@/components/atoms/Text/Text';
 import { FiMenu } from 'react-icons/fi';
 import { HeaderProps } from './Header.types';
@@ -5,6 +7,8 @@ import { HeaderAvatar, HeaderWrapper, Left, Right, HamburgerButton } from './Hea
 
 
 export default function Header({ onMenuClick, username = "Marina Kim", avatarUrl = "https://randomuser.me/api/portraits/women/31.jpg" }: HeaderProps) {
+  const { mode, toggle } = useThemeMode();
+  // console.log('Header rendered with mode:', mode);
   return (
     <HeaderWrapper>
       <Left>
@@ -21,6 +25,7 @@ export default function Header({ onMenuClick, username = "Marina Kim", avatarUrl
         <Text variant="body" as="span" color="#FFFFFF">
           {username}
         </Text>
+        <ThemeToggle mode={mode} onToggle={toggle} />
       </Right>
     </HeaderWrapper>
   );

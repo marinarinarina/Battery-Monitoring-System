@@ -8,7 +8,7 @@ export const ThemeToggle = ({ mode, onToggle }: ThemeToggleProps) => {
     <SwitchWrapper
       checked={checked}
       aria-checked={checked}
-      aria-label="Toggle dark mode"
+      aria-label="다크모드 전환"
       role="switch"
       type="button"
       tabIndex={0}

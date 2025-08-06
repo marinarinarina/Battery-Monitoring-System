@@ -1,4 +1,3 @@
-// components/templates/AppLayout.tsx
 import React, { useState } from 'react';
 import Header from '@/components/organisms/Header/Header';
 import Sidebar from '@/components/organisms/Sidebar/Sidebar';
@@ -21,7 +20,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         onClose={handleSidebarClose}
         // activeMenu, onNavigate 등 필요시 추가
       />
-      {/* 모바일 사이드바 오픈 시 오버레이 */}
+      {/* 모바일 사이드바 오픈 시 오버레이 적용 */}
       <Overlay visible={sidebarOpen} onClick={handleSidebarClose} />
       <MainLayout>{children}</MainLayout>
     </>

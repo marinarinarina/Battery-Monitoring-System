@@ -124,8 +124,8 @@ export const theme = {
     tooltip: 20,
     modal: 30,
     toast: 40,
-    header: 50,
-    sidebar: 60,
+    sidebar: 50,
+    header: 60,
   },
 
   transition: {

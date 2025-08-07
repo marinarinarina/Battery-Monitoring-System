@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '@/components/organisms/Header/Header';
 import Sidebar from '@/components/organisms/Sidebar/Sidebar';
 import MainLayout from '@/components/templates/MainLayout/MainLayout';
-import { Overlay } from './AppLayout.styles';
+import { Overlay, AppGrid, GridHeader, GridSidebar, GridMain } from './AppLayout.styles';
 
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
@@ -13,16 +13,22 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   const handleSidebarClose = () => setSidebarOpen(false);
 
   return (
-    <>
-      <Header onMenuClick={handleMenuClick} />
-      <Sidebar
-        open={sidebarOpen}
-        onClose={handleSidebarClose}
-        // activeMenu, onNavigate 등 필요시 추가
-      />
+    <AppGrid>
+      <GridHeader>
+        <Header as="div" onMenuClick={handleMenuClick} />
+      </GridHeader>
+      <GridSidebar open={sidebarOpen}>
+        <Sidebar
+          as="div"
+          open={sidebarOpen}
+          onClose={handleSidebarClose}
+        />
+      </GridSidebar>
       {/* 모바일 사이드바 오픈 시 오버레이 적용 */}
       <Overlay visible={sidebarOpen} onClick={handleSidebarClose} />
-      <MainLayout>{children}</MainLayout>
-    </>
+      <GridMain>
+        <MainLayout as="div">{children}</MainLayout>
+      </GridMain>
+    </AppGrid>
   );
 }

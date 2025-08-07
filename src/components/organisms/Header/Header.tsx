@@ -6,11 +6,15 @@ import { HeaderProps } from './Header.types';
 import { HeaderAvatar, HeaderWrapper, Left, Right, HamburgerButton } from './Header.styles';
 
 
-export default function Header({ onMenuClick, username = "Marina Kim", avatarUrl = "https://randomuser.me/api/portraits/women/31.jpg" }: HeaderProps) {
+export default function Header({ 
+  onMenuClick, username = "Marina Kim", 
+  avatarUrl = "https://randomuser.me/api/portraits/women/31.jpg", 
+  as = "header", 
+}: HeaderProps) {
   const { mode, toggle } = useThemeMode();
   // console.log('Header rendered with mode:', mode);
   return (
-    <HeaderWrapper>
+    <HeaderWrapper as={as} >
       <Left>
         {/* 모바일 햄버거 버튼 (PC에서 숨김) */}
         <HamburgerButton

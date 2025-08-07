@@ -56,6 +56,11 @@ const meta: Meta<typeof MonitoringGrid> = {
   component: MonitoringGrid,
   tags: ['autodocs'],
   parameters: {
+    docs: {
+      description: {
+        component: '모니터링 그리드 컴포넌트로, 여러 모니터링 카드를 그리드 형태로 표시합니다. 각 카드는 카메라 영상(테스트용 영상)과 함께 진동, 소음, 열, 셀 온도 데이터를 표시합니다.',
+      },
+    },
     layout: 'fullscreen',
   },
   argTypes: {},

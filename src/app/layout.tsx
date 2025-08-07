@@ -1,6 +1,5 @@
 'use client';
 
-import AppLayout from '@/components/templates/AppLayout/AppLayout';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// margin-top: ${({ theme }) => theme.layout.headerHeight.desktop}px;
+
 export const LayoutContainer = styled.main`
   margin-top: ${({ theme }) => theme.layout.headerHeight.desktop}px;
   margin-left: 240px;

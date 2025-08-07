@@ -6,6 +6,6 @@ export interface TextProps {
   variant?: TextVariant;
   color?: string;
   children: React.ReactNode;
-  as?: React.ElementType
+  as?: React.ElementType;
   className?: string;
 }

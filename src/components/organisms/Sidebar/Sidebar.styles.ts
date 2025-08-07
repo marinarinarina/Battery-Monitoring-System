@@ -13,9 +13,9 @@ export const SidebarWrapper = styled.nav<{ open?: boolean }>`
   width: 240px;
   background: ${({ theme }) => theme.colors.sidebar};
   color: ${({ theme }) => theme.colors.textSecondary};
-  padding: 32px 0 0 0;
+  padding: 32px 0 32px 0;
   height: 100vh;
-  position: sticky;
+  position: static;
   top: 0;
   z-index: ${({ theme }) => theme.zIndex.sidebar};
 

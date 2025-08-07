@@ -19,9 +19,9 @@ const menus = [
   { key: 'settings', label: '설정', icon: FiSettings },
 ];
 
-export default function Sidebar({ open = true, onClose, activeMenu, onNavigate }: SidebarProps) {
+export default function Sidebar({ open = true, onClose, activeMenu, onNavigate, as="nav" }: SidebarProps) {
   return (
-    <SidebarWrapper open={open}>
+    <SidebarWrapper as={as} open={open}>
       <SidebarTitle>실시간 공정 모니터링</SidebarTitle>
       {/* 모바일 닫기버튼 */}
       {onClose && (

@@ -4,5 +4,17 @@ export const LOCATIONS = [
   '청정 및 오염 방지 구역', '알람 및 모니터링 스테이션', '폐액 수집 및 처리 구역',
 ] as const;
 
+export const VIDEO_FILES = [
+  'CAMERA-001.mp4',
+  'CAMERA-002.mp4',
+  'CAMERA-003.mp4',
+  'CAMERA-004.mp4',
+  'CAMERA-005.mp4',
+  'CAMERA-006.mp4', 
+  'CAMERA-007.mp4',
+  'CAMERA-008.mp4',
+  'CAMERA-009.mp4',
+] as const;
 
 export type LocationType = (typeof LOCATIONS)[number];
+export type VideoFileType = (typeof VIDEO_FILES)[number];

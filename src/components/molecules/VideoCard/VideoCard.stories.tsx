@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import VideoCard from './VideoCard';
+import { VIDEO_FILES } from '@/utils/faker.types';
 
 const meta: Meta<typeof VideoCard> = {
   title: 'Molecules/VideoCard',
@@ -22,33 +23,33 @@ export default meta;
 
 type Story = StoryObj<typeof VideoCard>;
 
-/** ✅ 기본 라이브 영상 카드 */
+// 기본 라이브 영상 카드
 export const Live: Story = {
   args: {
     cameraId: 'CAM-01',
-    videoSrc: '/videos/CAMERA-001.mp4',
+    videoSrc: VIDEO_FILES[0],
     status: 'live',
     loading: false,
     error: false,
   },
 };
 
-/** ✅ 영상 로딩 중 */
+// 영상 로딩 중
 export const Loading: Story = {
   args: {
     cameraId: 'CAM-02',
-    videoSrc: '/videos/CAMERA-002.mp4',
+    videoSrc: VIDEO_FILES[1],
     status: 'live',
     loading: true,
     error: false,
   },
 };
 
-/** ✅ 카메라 오류 상태 (재시도 버튼 포함) */
+// 카메라 오류 상태 (재시도 버튼 포함)
 export const Error: Story = {
   args: {
     cameraId: 'CAM-03',
-    videoSrc: '/videos/CAMERA-003.mp4',
+    videoSrc: VIDEO_FILES[2],
     error: true,
     status: 'offline',
   },
@@ -57,7 +58,7 @@ export const Error: Story = {
 export const Offline: Story = {
   args: {
     cameraId: 'CAM-04',
-    videoSrc: '/videos/CAMERA-004.mp4',
+    videoSrc: VIDEO_FILES[3],
     status: 'offline',
     loading: false,
     error: false,

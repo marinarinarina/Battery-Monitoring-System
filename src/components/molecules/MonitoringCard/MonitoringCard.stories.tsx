@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import MonitoringCard from './MonitoringCard';
-import { LOCATIONS } from '@/utils/faker';
+import { LOCATIONS, VIDEO_FILES } from '@/utils/faker.types';
 
 const meta: Meta<typeof MonitoringCard> = {
   title: 'Molecules/MonitoringCard',
@@ -28,8 +28,8 @@ type Story = StoryObj<typeof MonitoringCard>;
 export const Default: Story = {
   args: {
     cameraId: 'CAMERA-001',
-    videoSrc: '/videos/CAMERA-001.mp4',
-    location: '원료 준비 구역',
+    videoSrc: VIDEO_FILES[0],
+    location: LOCATIONS[0],
     vibration: 3.2,
     noise: 72.4,
     heat: 65.0,

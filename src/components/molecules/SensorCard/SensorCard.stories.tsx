@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import SensorCard from './SensorCard';
-import { LOCATIONS } from '@/utils/faker';
+import { LOCATIONS } from '@/utils/faker.types';
 
 const meta: Meta<typeof SensorCard> = {
   title: 'Molecules/SensorCard',

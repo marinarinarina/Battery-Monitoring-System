@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import MonitoringGrid from './MonitoringGrid';
 import type { MonitoringCardProps } from '@/components/molecules/MonitoringCard/MonitoringCard.types';
-import { LOCATIONS } from '@/utils/faker';
+import { LOCATIONS, VIDEO_FILES } from '@/utils/faker.types';
 
 
 const exampleCards: MonitoringCardProps[] = [
   {
     cameraId: 'CAMERA-001',
-    videoSrc: '/videos/CAMERA-001.mp4',
+    videoSrc: VIDEO_FILES[0],
     location: LOCATIONS[0],
     vibration: 3.2,
     noise: 72.4,
@@ -18,7 +18,7 @@ const exampleCards: MonitoringCardProps[] = [
   },
   {
     cameraId: 'CAMERA-002',
-    videoSrc: '/videos/CAMERA-002.mp4',
+    videoSrc: VIDEO_FILES[1],
     location: LOCATIONS[1],
     vibration: 4.8,
     noise: 80.1,
@@ -29,7 +29,7 @@ const exampleCards: MonitoringCardProps[] = [
   },
   {
     cameraId: 'CAMERA-003',
-    videoSrc: '/videos/CAMERA-003.mp4',
+    videoSrc: VIDEO_FILES[2],
     location: LOCATIONS[2],
     vibration: 7.1,
     noise: 95.2,
@@ -40,7 +40,7 @@ const exampleCards: MonitoringCardProps[] = [
   },
   {
     cameraId: 'CAMERA-004',
-    videoSrc: '/videos/CAMERA-004.mp4',
+    videoSrc: VIDEO_FILES[3],
     location: LOCATIONS[3],
     vibration: 7.1,
     noise: 95.2,

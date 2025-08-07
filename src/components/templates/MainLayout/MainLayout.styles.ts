@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 // margin-top: ${({ theme }) => theme.layout.headerHeight.desktop}px;
 export const LayoutContainer = styled.main`
-  margin-top: -560px;
+  margin-top: ${({ theme }) => theme.layout.headerHeight.desktop}px;
   margin-left: 240px;
-  min-height: 100vh;
-  padding: 32px;
+  min-height: calc(100vh - ${({ theme }) => theme.layout.headerHeight.desktop}px);
+  padding: ${({ theme }) => theme.layout.sidePadding.desktop}px;
   background: ${({ theme }) => theme.colors.background};
   box-sizing: border-box;
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet - 1}px) {

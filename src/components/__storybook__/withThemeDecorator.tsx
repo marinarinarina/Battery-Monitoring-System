@@ -1,4 +1,4 @@
-import type { StoryFn, StoryContext } from '@storybook/react';
+import type { StoryFn, StoryContext } from '@storybook/nextjs-vite';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 
 export const withTheme = (Story: StoryFn, context: StoryContext) => {

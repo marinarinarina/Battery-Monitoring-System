@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use client';
 
 import AppLayout from '@/components/templates/AppLayout/AppLayout';

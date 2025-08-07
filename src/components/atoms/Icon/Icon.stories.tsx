@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { Icon } from './Icon';
 import { FaCheck, FaTimes } from 'react-icons/fa';
 import { MdSearch } from 'react-icons/md';

@@ -1,6 +1,4 @@
-import dynamic from 'next/dynamic';
-
-const MonitorPage = dynamic(() => import('@/components/pages/Monitor/MonitorPage'), { ssr: false });
+import MonitorPage from '@/components/pages/Monitor/MonitorPage';
 
 export default function MonitorRoutePage() {
   return <MonitorPage />;

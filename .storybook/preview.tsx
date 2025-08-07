@@ -2,7 +2,6 @@ import type { Preview } from '@storybook/nextjs-vite';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../src/styles/GlobalStyle';
 import { theme, themeDark } from '../src/styles/theme'; 
-import React from 'react';
 
 export const globalTypes = {
   theme: {
@@ -30,7 +29,7 @@ export const decorators = [
     return (
       <ThemeProvider theme={isDark ? themeDark : theme}>
         <GlobalStyle />
-        <Story />
+          <Story />
       </ThemeProvider>
     );
   },

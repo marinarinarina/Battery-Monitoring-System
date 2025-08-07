@@ -9,15 +9,9 @@ import {
 import { SidebarProps } from './Sidebar.types';
 import { Icon } from '@/components/atoms/Icon/Icon';
 import { Text } from '@/components/atoms/Text/Text';
-import { FiMonitor, FiBarChart2, FiList, FiSettings, FiX } from 'react-icons/fi';
+import { FiX } from 'react-icons/fi';
+import { menus } from '@/utils/menus.types';
 
-
-const menus = [
-  { key: 'dashboard', label: '대시보드', icon: FiBarChart2 },
-  { key: 'monitor', label: '모니터링', icon: FiMonitor },
-  { key: 'logs', label: '로그 기록', icon: FiList },
-  { key: 'settings', label: '설정', icon: FiSettings },
-];
 
 export default function Sidebar({ open = true, onClose, activeMenu, onNavigate, as="nav" }: SidebarProps) {
   return (

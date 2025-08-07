@@ -1,3 +1,5 @@
+'use client';
+
 import AppLayout from '@/components/templates/AppLayout/AppLayout';
 import MonitoringGrid from '@/components/organisms/MonitoringGrid/MonitoringGrid';
 import { useEffect, useState } from 'react';

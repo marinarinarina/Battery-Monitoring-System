@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { HeaderWrapper as BaseHeaderWrapper } from '@/components/organisms/Header/Header.styles';
 import { SidebarWrapper as BaseSidebarWrapper } from '@/components/organisms/Sidebar/Sidebar.styles';   
-import { LayoutContainer as BaseLayoutContainer } from '@/components/templates/MainLayout/MainLayout.styles';  
 
 
 // 모바일에서 Sidebar가 오버레이 될 때 전체를 덮는 반투명한 배경(클릭시 닫힘)
@@ -40,13 +39,12 @@ export const AppGrid = styled.div`
 // 그리드 레이아웃 적용 시 기존 위치 속성은 모두 무시
 export const GridHeader = styled(BaseHeaderWrapper)`
   grid-area: header;
-  position: static !important;
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
-  width: auto !important;
-  min-width: 0 !important;
-  
+  position: static;
+  top: auto;
+  left: auto;
+  right: auto;
+  width: auto;
+  min-width: 0;
 `;
 
 export const GridSidebar = styled(BaseSidebarWrapper)`
@@ -58,15 +56,5 @@ export const GridSidebar = styled(BaseSidebarWrapper)`
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet - 1}px) {
     top: ${({ theme }) => theme.layout.headerHeight.mobile}px;
     position: fixed;
-  }
-`;
-
-export const GridMain = styled(BaseLayoutContainer)`
-  grid-area: main;
-  min-width: 0;
-  min-height: 0;
-  padding: 32px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet - 1}px) {
-    padding: 16px;
   }
 `;

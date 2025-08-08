@@ -7,7 +7,7 @@ UI/UX 엔지니어링 관점에서, **아토믹 디자인 패턴**을 적용하�
 
 ---
 
-## 🚀 주요 기능 (완료)
+## 🚀 주요 기능 (개발 완료된 기능)
 - **아토믹 디자인 패턴 기반 UI 설계**
   - Atom → Molecule → Organism → Template → Page 구조 적용
   - 전역 디자인 토큰(theme.ts)과 GlobalStyle로 일관된 스타일 유지
